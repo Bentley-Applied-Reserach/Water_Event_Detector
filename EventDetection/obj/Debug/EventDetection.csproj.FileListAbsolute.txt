@@ -1,0 +1,155 @@
+D:\Work\new anom\new anom\bin\Debug\Event Detection.exe.config
+D:\Work\new anom\new anom\bin\Debug\Event Detection.exe.manifest
+D:\Work\new anom\new anom\bin\Debug\Event Detection.application
+D:\Work\new anom\new anom\bin\Debug\Event Detection.exe
+D:\Work\new anom\new anom\bin\Debug\Event Detection.pdb
+D:\Work\new anom\new anom\bin\Debug\DynamicInterop.dll
+D:\Work\new anom\new anom\bin\Debug\Microsoft.CSharp.dll
+D:\Work\new anom\new anom\bin\Debug\Microsoft.VisualBasic.dll
+D:\Work\new anom\new anom\bin\Debug\RDotNet.dll
+D:\Work\new anom\new anom\bin\Debug\RDotNet.NativeLibrary.dll
+D:\Work\new anom\new anom\bin\Debug\System.Data.DataSetExtensions.dll
+D:\Work\new anom\new anom\bin\Debug\System.Data.dll
+D:\Work\new anom\new anom\bin\Debug\System.Deployment.dll
+D:\Work\new anom\new anom\bin\Debug\System.dll
+D:\Work\new anom\new anom\bin\Debug\System.Drawing.dll
+D:\Work\new anom\new anom\bin\Debug\System.Net.Http.dll
+D:\Work\new anom\new anom\bin\Debug\System.Numerics.dll
+D:\Work\new anom\new anom\bin\Debug\System.ValueTuple.dll
+D:\Work\new anom\new anom\bin\Debug\System.Windows.Forms.DataVisualization.dll
+D:\Work\new anom\new anom\bin\Debug\System.Windows.Forms.dll
+D:\Work\new anom\new anom\bin\Debug\System.Xml.dll
+D:\Work\new anom\new anom\bin\Debug\System.Xml.Linq.dll
+D:\Work\new anom\new anom\bin\Debug\DynamicInterop.xml
+D:\Work\new anom\new anom\bin\Debug\RDotNet.xml
+D:\Work\new anom\new anom\bin\Debug\RDotNet.NativeLibrary.xml
+D:\Work\new anom\new anom\bin\Debug\System.ValueTuple.xml
+D:\Work\new anom\new anom\obj\Debug\EventDetection.csprojResolveAssemblyReference.cache
+D:\Work\new anom\new anom\obj\Debug\new_anom.EventConfidenceLevel.resources
+D:\Work\new anom\new anom\obj\Debug\new_anom.SaveModelDetails.resources
+D:\Work\new anom\new anom\obj\Debug\new_anom.SystemEventChart.resources
+D:\Work\new anom\new anom\obj\Debug\new_anom.WaterEventDetector.resources
+D:\Work\new anom\new anom\obj\Debug\new_anom.Properties.Resources.resources
+D:\Work\new anom\new anom\obj\Debug\EventDetection.csproj.GenerateResource.Cache
+D:\Work\new anom\new anom\obj\Debug\EventDetection.csproj.CoreCompileInputs.cache
+D:\Work\new anom\new anom\obj\Debug\Event Detection.exe.manifest
+D:\Work\new anom\new anom\obj\Debug\Event Detection.application
+D:\Work\new anom\new anom\obj\Debug\Event Detection.exe
+D:\Work\new anom\new anom\obj\Debug\Event Detection.pdb
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\Event Detection.exe.config
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\Event Detection.exe.manifest
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\Event Detection.application
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\Event Detection.exe
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\Event Detection.pdb
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\DynamicInterop.dll
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\Microsoft.CSharp.dll
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\Microsoft.VisualBasic.dll
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\RDotNet.dll
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\RDotNet.NativeLibrary.dll
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\System.Data.DataSetExtensions.dll
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\System.Data.dll
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\System.Deployment.dll
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\System.dll
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\System.Drawing.dll
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\System.Net.Http.dll
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\System.Numerics.dll
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\System.ValueTuple.dll
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\System.Windows.Forms.DataVisualization.dll
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\System.Windows.Forms.dll
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\System.Xml.dll
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\System.Xml.Linq.dll
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\DynamicInterop.xml
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\RDotNet.xml
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\RDotNet.NativeLibrary.xml
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\bin\Debug\System.ValueTuple.xml
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\obj\Debug\EventDetection.csprojAssemblyReference.cache
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\obj\Debug\new_anom.EventConfidenceLevel.resources
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\obj\Debug\new_anom.SaveModelDetails.resources
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\obj\Debug\new_anom.SystemEventChart.resources
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\obj\Debug\new_anom.WaterEventDetector.resources
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\obj\Debug\new_anom.Properties.Resources.resources
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\obj\Debug\EventDetection.csproj.GenerateResource.cache
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\obj\Debug\EventDetection.csproj.CoreCompileInputs.cache
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\obj\Debug\Event Detection.exe.manifest
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\obj\Debug\Event Detection.application
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\obj\Debug\EventDetection.csproj.CopyComplete
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\obj\Debug\Event Detection.exe
+E:\WaterDistribution\EventDetection\D-Work\new anom\new anom\obj\Debug\Event Detection.pdb
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\Event Detection.exe.config
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\Event Detection.exe.manifest
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\Event Detection.application
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\Event Detection.exe
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\Event Detection.pdb
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\DynamicInterop.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\Microsoft.CSharp.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\Microsoft.VisualBasic.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\RDotNet.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\RDotNet.NativeLibrary.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\System.Data.DataSetExtensions.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\System.Data.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\System.Deployment.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\System.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\System.Drawing.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\System.Net.Http.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\System.Numerics.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\System.ValueTuple.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\System.Windows.Forms.DataVisualization.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\System.Windows.Forms.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\System.Xml.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\System.Xml.Linq.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\DynamicInterop.xml
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\RDotNet.xml
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\RDotNet.NativeLibrary.xml
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\bin\Debug\System.ValueTuple.xml
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\obj\Debug\EventDetection.csprojAssemblyReference.cache
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\obj\Debug\new_anom.EventConfidenceLevel.resources
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\obj\Debug\new_anom.SaveModelDetails.resources
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\obj\Debug\new_anom.SystemEventChart.resources
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\obj\Debug\new_anom.WaterEventDetector.resources
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\obj\Debug\new_anom.Properties.Resources.resources
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\obj\Debug\EventDetection.csproj.GenerateResource.cache
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\obj\Debug\EventDetection.csproj.CoreCompileInputs.cache
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\obj\Debug\Event Detection.exe.manifest
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\obj\Debug\Event Detection.application
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\obj\Debug\EventDetection.csproj.CopyComplete
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\obj\Debug\Event Detection.exe
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\new anom\obj\Debug\Event Detection.pdb
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\Event Detection.exe.config
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\Event Detection.exe.manifest
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\Event Detection.application
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\Event Detection.exe
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\Event Detection.pdb
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\DynamicInterop.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\Microsoft.CSharp.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\Microsoft.VisualBasic.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\RDotNet.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\RDotNet.NativeLibrary.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\System.Data.DataSetExtensions.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\System.Data.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\System.Deployment.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\System.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\System.Drawing.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\System.Net.Http.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\System.Numerics.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\System.ValueTuple.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\System.Windows.Forms.DataVisualization.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\System.Windows.Forms.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\System.Xml.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\System.Xml.Linq.dll
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\DynamicInterop.xml
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\RDotNet.xml
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\RDotNet.NativeLibrary.xml
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\bin\Debug\System.ValueTuple.xml
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\obj\Debug\new_anom.EventConfidenceLevel.resources
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\obj\Debug\new_anom.SaveModelDetails.resources
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\obj\Debug\new_anom.SystemEventChart.resources
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\obj\Debug\new_anom.WaterEventDetector.resources
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\obj\Debug\new_anom.Properties.Resources.resources
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\obj\Debug\EventDetection.csproj.GenerateResource.cache
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\obj\Debug\EventDetection.csproj.CoreCompileInputs.cache
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\obj\Debug\Event Detection.exe.manifest
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\obj\Debug\Event Detection.application
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\obj\Debug\EventDetection.csproj.CopyComplete
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\obj\Debug\Event Detection.exe
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\obj\Debug\Event Detection.pdb
+E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\obj\Debug\EventDetection.csprojAssemblyReference.cache

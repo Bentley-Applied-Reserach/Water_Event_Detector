@@ -1,0 +1,38 @@
+D:\Work\new anom\new anom\obj\Debug\new_anom.Properties.Resources.resources
+D:\Work\new anom\new anom\obj\Debug\new anom.csproj.GenerateResource.Cache
+D:\Work\new anom\new anom\obj\Debug\new anom.csproj.CoreCompileInputs.cache
+D:\Work\new anom\new anom\obj\Debug\new_anom.WaterEventDetector.resources
+D:\Work\new anom\new anom\bin\Debug\DynamicInterop.dll
+D:\Work\new anom\new anom\bin\Debug\RDotNet.dll
+D:\Work\new anom\new anom\bin\Debug\RDotNet.NativeLibrary.dll
+D:\Work\new anom\new anom\bin\Debug\DynamicInterop.xml
+D:\Work\new anom\new anom\bin\Debug\RDotNet.xml
+D:\Work\new anom\new anom\bin\Debug\RDotNet.NativeLibrary.xml
+D:\Work\new anom\new anom\bin\Debug\System.ValueTuple.dll
+D:\Work\new anom\new anom\bin\Debug\System.ValueTuple.xml
+D:\Work\new anom\new anom\obj\Debug\new_anom.SystemEventChart.resources
+D:\Work\new anom\new anom\bin\Debug\Event Detection.exe.config
+D:\Work\new anom\new anom\bin\Debug\Event Detection.exe.manifest
+D:\Work\new anom\new anom\bin\Debug\Event Detection.application
+D:\Work\new anom\new anom\bin\Debug\Event Detection.exe
+D:\Work\new anom\new anom\bin\Debug\Event Detection.pdb
+D:\Work\new anom\new anom\bin\Debug\Microsoft.CSharp.dll
+D:\Work\new anom\new anom\bin\Debug\Microsoft.VisualBasic.dll
+D:\Work\new anom\new anom\bin\Debug\System.Data.DataSetExtensions.dll
+D:\Work\new anom\new anom\bin\Debug\System.Data.dll
+D:\Work\new anom\new anom\bin\Debug\System.Deployment.dll
+D:\Work\new anom\new anom\bin\Debug\System.dll
+D:\Work\new anom\new anom\bin\Debug\System.Drawing.dll
+D:\Work\new anom\new anom\bin\Debug\System.Net.Http.dll
+D:\Work\new anom\new anom\bin\Debug\System.Numerics.dll
+D:\Work\new anom\new anom\bin\Debug\System.Windows.Forms.DataVisualization.dll
+D:\Work\new anom\new anom\bin\Debug\System.Windows.Forms.dll
+D:\Work\new anom\new anom\bin\Debug\System.Xml.dll
+D:\Work\new anom\new anom\bin\Debug\System.Xml.Linq.dll
+D:\Work\new anom\new anom\obj\Debug\Event Detection.exe.manifest
+D:\Work\new anom\new anom\obj\Debug\Event Detection.application
+D:\Work\new anom\new anom\obj\Debug\Event Detection.exe
+D:\Work\new anom\new anom\obj\Debug\Event Detection.pdb
+D:\Work\new anom\new anom\obj\Debug\new anom.csprojResolveAssemblyReference.cache
+D:\Work\new anom\new anom\obj\Debug\new_anom.EventConfidenceLevel.resources
+D:\Work\new anom\new anom\obj\Debug\new_anom.SaveModelDetails.resources

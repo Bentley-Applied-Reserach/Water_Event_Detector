@@ -1,0 +1,35 @@
+D:\Work\new anom\new anom\bin\x86\Debug\Event Detection.exe.config
+D:\Work\new anom\new anom\bin\x86\Debug\Event Detection.exe.manifest
+D:\Work\new anom\new anom\bin\x86\Debug\Event Detection.application
+D:\Work\new anom\new anom\bin\x86\Debug\Event Detection.exe
+D:\Work\new anom\new anom\bin\x86\Debug\Event Detection.pdb
+D:\Work\new anom\new anom\bin\x86\Debug\DynamicInterop.dll
+D:\Work\new anom\new anom\bin\x86\Debug\Microsoft.CSharp.dll
+D:\Work\new anom\new anom\bin\x86\Debug\Microsoft.VisualBasic.dll
+D:\Work\new anom\new anom\bin\x86\Debug\RDotNet.dll
+D:\Work\new anom\new anom\bin\x86\Debug\RDotNet.NativeLibrary.dll
+D:\Work\new anom\new anom\bin\x86\Debug\System.Data.DataSetExtensions.dll
+D:\Work\new anom\new anom\bin\x86\Debug\System.Data.dll
+D:\Work\new anom\new anom\bin\x86\Debug\System.Deployment.dll
+D:\Work\new anom\new anom\bin\x86\Debug\System.dll
+D:\Work\new anom\new anom\bin\x86\Debug\System.Drawing.dll
+D:\Work\new anom\new anom\bin\x86\Debug\System.Net.Http.dll
+D:\Work\new anom\new anom\bin\x86\Debug\System.Numerics.dll
+D:\Work\new anom\new anom\bin\x86\Debug\System.ValueTuple.dll
+D:\Work\new anom\new anom\bin\x86\Debug\System.Windows.Forms.DataVisualization.dll
+D:\Work\new anom\new anom\bin\x86\Debug\System.Windows.Forms.dll
+D:\Work\new anom\new anom\bin\x86\Debug\System.Xml.dll
+D:\Work\new anom\new anom\bin\x86\Debug\System.Xml.Linq.dll
+D:\Work\new anom\new anom\bin\x86\Debug\DynamicInterop.xml
+D:\Work\new anom\new anom\bin\x86\Debug\RDotNet.xml
+D:\Work\new anom\new anom\bin\x86\Debug\RDotNet.NativeLibrary.xml
+D:\Work\new anom\new anom\bin\x86\Debug\System.ValueTuple.xml
+D:\Work\new anom\new anom\obj\x86\Debug\new_anom.SystemEventChart.resources
+D:\Work\new anom\new anom\obj\x86\Debug\new_anom.WaterEventDetector.resources
+D:\Work\new anom\new anom\obj\x86\Debug\new_anom.Properties.Resources.resources
+D:\Work\new anom\new anom\obj\x86\Debug\new anom.csproj.GenerateResource.Cache
+D:\Work\new anom\new anom\obj\x86\Debug\new anom.csproj.CoreCompileInputs.cache
+D:\Work\new anom\new anom\obj\x86\Debug\Event Detection.exe.manifest
+D:\Work\new anom\new anom\obj\x86\Debug\Event Detection.application
+D:\Work\new anom\new anom\obj\x86\Debug\Event Detection.exe
+D:\Work\new anom\new anom\obj\x86\Debug\Event Detection.pdb

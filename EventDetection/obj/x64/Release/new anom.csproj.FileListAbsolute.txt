@@ -1,0 +1,36 @@
+D:\Work\new anom\new anom\bin\x64\Release\Event Detection.exe.config
+D:\Work\new anom\new anom\bin\x64\Release\Event Detection.exe.manifest
+D:\Work\new anom\new anom\bin\x64\Release\Event Detection.application
+D:\Work\new anom\new anom\bin\x64\Release\Event Detection.exe
+D:\Work\new anom\new anom\bin\x64\Release\Event Detection.pdb
+D:\Work\new anom\new anom\bin\x64\Release\DynamicInterop.dll
+D:\Work\new anom\new anom\bin\x64\Release\Microsoft.CSharp.dll
+D:\Work\new anom\new anom\bin\x64\Release\Microsoft.VisualBasic.dll
+D:\Work\new anom\new anom\bin\x64\Release\RDotNet.dll
+D:\Work\new anom\new anom\bin\x64\Release\RDotNet.NativeLibrary.dll
+D:\Work\new anom\new anom\bin\x64\Release\System.Data.DataSetExtensions.dll
+D:\Work\new anom\new anom\bin\x64\Release\System.Data.dll
+D:\Work\new anom\new anom\bin\x64\Release\System.Deployment.dll
+D:\Work\new anom\new anom\bin\x64\Release\System.dll
+D:\Work\new anom\new anom\bin\x64\Release\System.Drawing.dll
+D:\Work\new anom\new anom\bin\x64\Release\System.Net.Http.dll
+D:\Work\new anom\new anom\bin\x64\Release\System.Numerics.dll
+D:\Work\new anom\new anom\bin\x64\Release\System.ValueTuple.dll
+D:\Work\new anom\new anom\bin\x64\Release\System.Windows.Forms.DataVisualization.dll
+D:\Work\new anom\new anom\bin\x64\Release\System.Windows.Forms.dll
+D:\Work\new anom\new anom\bin\x64\Release\System.Xml.dll
+D:\Work\new anom\new anom\bin\x64\Release\System.Xml.Linq.dll
+D:\Work\new anom\new anom\bin\x64\Release\DynamicInterop.xml
+D:\Work\new anom\new anom\bin\x64\Release\RDotNet.xml
+D:\Work\new anom\new anom\bin\x64\Release\RDotNet.NativeLibrary.xml
+D:\Work\new anom\new anom\bin\x64\Release\System.ValueTuple.xml
+D:\Work\new anom\new anom\obj\x64\Release\new_anom.SystemEventChart.resources
+D:\Work\new anom\new anom\obj\x64\Release\new_anom.WaterEventDetector.resources
+D:\Work\new anom\new anom\obj\x64\Release\new_anom.Properties.Resources.resources
+D:\Work\new anom\new anom\obj\x64\Release\new anom.csproj.GenerateResource.Cache
+D:\Work\new anom\new anom\obj\x64\Release\new anom.csproj.CoreCompileInputs.cache
+D:\Work\new anom\new anom\obj\x64\Release\Event Detection.exe.manifest
+D:\Work\new anom\new anom\obj\x64\Release\Event Detection.application
+D:\Work\new anom\new anom\obj\x64\Release\Event Detection.exe
+D:\Work\new anom\new anom\obj\x64\Release\Event Detection.pdb
+D:\Work\new anom\new anom\obj\x64\Release\new anom.csprojResolveAssemblyReference.cache

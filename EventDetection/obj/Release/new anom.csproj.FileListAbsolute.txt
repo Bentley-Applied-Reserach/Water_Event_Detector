@@ -1,0 +1,38 @@
+D:\Work\new anom\new anom\bin\Release\DynamicInterop.dll
+D:\Work\new anom\new anom\bin\Release\RDotNet.dll
+D:\Work\new anom\new anom\bin\Release\RDotNet.NativeLibrary.dll
+D:\Work\new anom\new anom\bin\Release\System.ValueTuple.dll
+D:\Work\new anom\new anom\bin\Release\DynamicInterop.xml
+D:\Work\new anom\new anom\bin\Release\RDotNet.xml
+D:\Work\new anom\new anom\bin\Release\RDotNet.NativeLibrary.xml
+D:\Work\new anom\new anom\bin\Release\System.ValueTuple.xml
+D:\Work\new anom\new anom\obj\Release\new_anom.SystemEventChart.resources
+D:\Work\new anom\new anom\obj\Release\new_anom.WaterEventDetector.resources
+D:\Work\new anom\new anom\obj\Release\new_anom.Properties.Resources.resources
+D:\Work\new anom\new anom\obj\Release\new anom.csproj.GenerateResource.Cache
+D:\Work\new anom\new anom\obj\Release\new anom.csproj.CoreCompileInputs.cache
+D:\Work\new anom\new anom\bin\Release\Event Detection.exe.config
+D:\Work\new anom\new anom\bin\Release\Event Detection.exe.manifest
+D:\Work\new anom\new anom\bin\Release\Event Detection.application
+D:\Work\new anom\new anom\bin\Release\Event Detection.exe
+D:\Work\new anom\new anom\bin\Release\Event Detection.pdb
+D:\Work\new anom\new anom\obj\Release\Event Detection.exe.manifest
+D:\Work\new anom\new anom\obj\Release\Event Detection.application
+D:\Work\new anom\new anom\obj\Release\Event Detection.exe
+D:\Work\new anom\new anom\obj\Release\Event Detection.pdb
+D:\Work\new anom\new anom\bin\Release\Microsoft.CSharp.dll
+D:\Work\new anom\new anom\bin\Release\Microsoft.VisualBasic.dll
+D:\Work\new anom\new anom\bin\Release\System.Data.DataSetExtensions.dll
+D:\Work\new anom\new anom\bin\Release\System.Data.dll
+D:\Work\new anom\new anom\bin\Release\System.Deployment.dll
+D:\Work\new anom\new anom\bin\Release\System.dll
+D:\Work\new anom\new anom\bin\Release\System.Drawing.dll
+D:\Work\new anom\new anom\bin\Release\System.Net.Http.dll
+D:\Work\new anom\new anom\bin\Release\System.Numerics.dll
+D:\Work\new anom\new anom\bin\Release\System.Windows.Forms.DataVisualization.dll
+D:\Work\new anom\new anom\bin\Release\System.Windows.Forms.dll
+D:\Work\new anom\new anom\bin\Release\System.Xml.dll
+D:\Work\new anom\new anom\bin\Release\System.Xml.Linq.dll
+D:\Work\new anom\new anom\obj\Release\new anom.csprojResolveAssemblyReference.cache
+D:\Work\new anom\new anom\obj\Release\new_anom.EventConfidenceLevel.resources
+D:\Work\new anom\new anom\obj\Release\new_anom.SaveModelDetails.resources
