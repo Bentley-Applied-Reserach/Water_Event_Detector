@@ -7,14 +7,14 @@
     <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Event Detection.exe.manifest" size="6126">
+    <dependentAssembly dependencyType="install" codebase="Event Detection.exe.manifest" size="6124">
       <assemblyIdentity name="Event Detection.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3Ge7r/Y7vRjtBWyDlIW9HcX+62646eaPCIjIsxkBHPQ=</dsig:DigestValue>
+        <dsig:DigestValue>zccxilbY8Evf+Ccxx4qvfPIUG5WHxOfKe3Y18HwIcr8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

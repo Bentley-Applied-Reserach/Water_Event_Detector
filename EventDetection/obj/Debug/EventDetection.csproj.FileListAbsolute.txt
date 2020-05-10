@@ -153,3 +153,42 @@ E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\obj\Debu
 E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\obj\Debug\Event Detection.exe
 E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\obj\Debug\Event Detection.pdb
 E:\WaterDistribution\EventDetection\D-Work\EventDetector\EventDetection\obj\Debug\EventDetection.csprojAssemblyReference.cache
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\Event Detection.exe.config
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\Event Detection.exe.manifest
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\Event Detection.application
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\Event Detection.exe
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\Event Detection.pdb
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\DynamicInterop.dll
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\Microsoft.CSharp.dll
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\Microsoft.VisualBasic.dll
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\RDotNet.dll
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\RDotNet.NativeLibrary.dll
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\System.Data.DataSetExtensions.dll
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\System.Data.dll
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\System.Deployment.dll
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\System.dll
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\System.Drawing.dll
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\System.Net.Http.dll
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\System.Numerics.dll
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\System.ValueTuple.dll
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\System.Windows.Forms.DataVisualization.dll
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\System.Windows.Forms.dll
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\System.Xml.dll
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\System.Xml.Linq.dll
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\DynamicInterop.xml
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\RDotNet.xml
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\RDotNet.NativeLibrary.xml
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\bin\Debug\System.ValueTuple.xml
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\obj\Debug\EventDetection.csprojAssemblyReference.cache
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\obj\Debug\new_anom.EventConfidenceLevel.resources
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\obj\Debug\new_anom.SaveModelDetails.resources
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\obj\Debug\new_anom.SystemEventChart.resources
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\obj\Debug\new_anom.WaterEventDetector.resources
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\obj\Debug\new_anom.Properties.Resources.resources
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\obj\Debug\EventDetection.csproj.GenerateResource.cache
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\obj\Debug\EventDetection.csproj.CoreCompileInputs.cache
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\obj\Debug\Event Detection.exe.manifest
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\obj\Debug\Event Detection.application
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\obj\Debug\EventDetection.csproj.CopyComplete
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\obj\Debug\Event Detection.exe
+C:\Users\Yekun He\Source\Repos\Water-Event-Detection\EventDetection\obj\Debug\Event Detection.pdb

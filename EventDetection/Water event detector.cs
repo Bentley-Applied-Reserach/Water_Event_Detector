@@ -23,7 +23,7 @@ namespace new_anom
         public static string pressure_unit = "Meter";
         public static string current_unit = "(null)";
         //R engine
-        REngine engine;
+        // REngine engine;
         //ste
         int ste_flow_start_index = -1;
         int ste_flow_end_index = -1;
@@ -56,9 +56,9 @@ namespace new_anom
         {
             InitializeComponent();
             //initialize R engine
-            REngine.SetEnvironmentVariables();
-            engine = REngine.GetInstance();
-            engine.Initialize();
+            // REngine.SetEnvironmentVariables();
+            // engine = REngine.GetInstance();
+            // engine.Initialize();
             //data pre-processing tab initiation
             dpp_file_path_tb.Text = "E:\\WaterDistribution\\EventDetection\\C-Work\\improved stl\\flow and pressure data\\NYSR.csv";
             dpp_minstep_tb.Text = "10";
@@ -442,9 +442,8 @@ namespace new_anom
             try
             {
                 string read_path = dcp_path_tb.Text;
-
-                /*****  Connect with R engine  ******/
-                //REngine engine;
+                /*
+                
                 //init the R engine            
                 //REngine.SetEnvironmentVariables();
                 //engine = REngine.GetInstance();
@@ -477,7 +476,7 @@ namespace new_anom
                     engine.Evaluate("write.csv(flow_data, SavePath)");
                     //clean up
                     //engine.Dispose();
-                    /***   Close R engine after saving file  ***/
+                    /***   Close R engine after saving file  **
 
                     DataTable csvData = new DataTable();
                     csvData = BasicFunction.read_csvfile(csvData, save_path);
@@ -544,7 +543,7 @@ namespace new_anom
                         dcp_chart.Series["Remainder with median"].Points.AddXY
                             (csvData.Rows[i]["Timestamp"], csvData.Rows[i]["new remainder"]);
                     }
-                }
+                }*/
             }
             catch (FormatException error)
             {
@@ -780,7 +779,7 @@ namespace new_anom
                         {
                             nmfilter = false;
                             nmfilter_coef = 0;
-                        }*/
+                        }
                         CharacterVector ReadPath = engine.CreateCharacterVector(new[] { ol_path_tb.Text });
                         engine.SetSymbol("read_filepath", ReadPath);
                         engine.Evaluate("p1 <- read.csv(read_filepath, header = TRUE)");
@@ -822,7 +821,7 @@ namespace new_anom
                         {
                             return;
                         }
-                        csvData = OlDetection.SH_ESD_ol(csvData, shesd_save_path);
+                        csvData = OlDetection.SH_ESD_ol(csvData, shesd_save_path);*/
                         break;
                     case 4://ml
                         ol_methodname_lb.Text = "EKF-DBN";
