@@ -420,5 +420,36 @@ namespace new_anom
             }
             return sys_event;
         }
+        public static DataTable pressure_only_event(DataTable dt, double timegap)
+        {
+            dt.Columns.Add("Pressure Event", typeof(String));
+            DataTable result_dt = dt.Clone();
+            int event_count = 0;
+            DateTime event_start = Convert.ToDateTime(dt.Rows[0]["Timestamp"].ToString());
+            DateTime event_end = event_start.AddMinutes(Convert.ToDouble(dt.Rows[0]["duration"].ToString()));
+            bool record_first_event = false;
+            for (int i = 1; i < dt.Rows.Count; i++)
+            {
+                DateTime next_event_start = Convert.ToDateTime(dt.Rows[i]["Timestamp"].ToString());
+                DateTime next_event_end = next_event_start.AddMinutes(Convert.ToDouble(dt.Rows[i]["duration"].ToString()));
+
+                if ((next_event_start - event_start).TotalMinutes < timegap)
+                {
+                    if (record_first_event == false) // record the first pressure event
+                    {
+                        dt.Rows[i - 1]["Pressure Event"] = ++event_count;
+                        result_dt.ImportRow(dt.Rows[i - 1]);
+                        record_first_event = true;
+                    }
+                    result_dt.ImportRow(dt.Rows[i]);
+                }
+                else
+                {
+                    record_first_event = false;
+                }
+                event_start = next_event_start;
+            }
+            return result_dt;
+        }
     }
 }

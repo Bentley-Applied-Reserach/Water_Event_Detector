@@ -3245,5 +3245,106 @@ namespace new_anom
         {
             
         }
+
+        private void ste_sys_event_identify_pre_bt_Click(object sender, EventArgs e)
+        {
+            bool pressure_high = ste_pre_high_cb.Checked;
+            bool pressure_low = ste_pre_low_cb.Checked;
+            string[] pressure_path = ste_pre_path_rtb.Lines;
+            DataTable csvData = new DataTable();
+            foreach (string path in pressure_path)
+            {
+                DataTable temp = new DataTable();
+                temp = BasicFunction.read_csvfile(temp, path);
+                DataView dv_pressure = new DataView(temp);
+                string dv_pressure_filter = "duration <> '' AND Name <> ''";
+                //dv_pressure.RowFilter = "Name <> ''";
+                if (pressure_high == false)
+                {
+                    dv_pressure_filter = dv_pressure_filter + "AND Warning <> 'High'";
+                }
+                if (pressure_low == false)
+                {
+                    dv_pressure_filter = dv_pressure_filter + "AND Warning <> 'Low'";
+                }
+                dv_pressure.RowFilter = dv_pressure_filter;
+
+                if (temp.Columns.Contains("out difference"))
+                {
+                    temp = dv_pressure.ToTable("Selected", false, "Timestamp", "Name", "Value", "Warning", "duration", "out difference");
+                }
+                else
+                {
+                    temp = dv_pressure.ToTable("Selected", false, "Timestamp", "Name", "Value", "Warning", "duration");
+                }
+                csvData.Merge(temp);
+            }
+            DataView dv_sort = new DataView(csvData);
+            dv_sort.Sort = "Timestamp";
+            csvData = dv_sort.ToTable();
+
+            //
+
+            csvData = SystemEvent.pressure_only_event(csvData, 15);
+
+            /**** Show result ****/
+            DataView dv_result = new DataView(csvData);
+            //dv_result.RowFilter = "duration <> ''";
+            csvData = dv_result.ToTable();
+            ste_result_dgv.DataSource = csvData;
+
+            int event_num = 0;
+            if (csvData.Rows.Count == 0)
+            {
+                MessageBox.Show("Result is empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            //string flow_name = csvData.Rows[0]["Name"].ToString();
+            string flow_name = flow_sensor_name;
+            ste_result_dgv.Columns["Value"].DefaultCellStyle.Format = "N2";
+            if (ste_result_dgv.Columns.Contains("out difference"))
+            {
+                ste_result_dgv.Columns["out difference"].DefaultCellStyle.Format = "N2";
+            }
+            //ste_result_dgv.Columns["out difference"].HeaderText = "Max out difference";
+
+            //set datagridview format
+            //row header width and alignment
+            ste_result_dgv.RowHeadersWidth = 50;
+            ste_result_dgv.RowHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            //header context
+            for (int i = 0; i < csvData.Rows.Count; i++)
+            {
+                if (csvData.Rows[i]["Name"].ToString() == flow_name)
+                {
+                    event_num++;
+                    ste_result_dgv.Rows[i].HeaderCell.Value = event_num.ToString();
+                }
+            }
+            //cell alignment
+            ste_result_dgv.Columns["Timestamp"].Width = 140;
+            ste_result_dgv.Columns["Name"].Width = 50;
+            ste_result_dgv.Columns["Value"].Width = 50;
+            ste_result_dgv.Columns["duration"].Width = 50;
+            ste_result_dgv.Columns["Warning"].Width = 50;
+            if (ste_result_dgv.Columns.Contains("out difference"))
+            {
+                ste_result_dgv.Columns["out difference"].Width = 70;
+            }
+            if (ste_result_dgv.Columns.Contains("Confidence level"))
+            {
+                ste_result_dgv.Columns["Confidence level"].Width = 70;
+            }
+            //ste_result_dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "CSV|.csv";
+            DialogResult result = sfd.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string path = sfd.FileName;
+                BasicFunction.WriteToCsvFile((DataTable)ste_result_dgv.DataSource, path);
+            }
+        }
     }
 }
