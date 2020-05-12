@@ -233,6 +233,7 @@
             this.label32 = new System.Windows.Forms.Label();
             this.ste_show_remainder_cb = new System.Windows.Forms.CheckBox();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.ste_sys_event_identify_pre_bt = new System.Windows.Forms.Button();
             this.ste_edit_confidencelvl_bt = new System.Windows.Forms.Button();
             this.ste_mnf_tb = new System.Windows.Forms.TextBox();
             this.ste_mnf_threshold_cb = new System.Windows.Forms.CheckBox();
@@ -366,7 +367,8 @@
             this.EKF_prediction_bt = new System.Windows.Forms.Button();
             this.EKF_predict_weight_tb = new System.Windows.Forms.TextBox();
             this.dataPreProcessBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ste_sys_event_identify_pre_bt = new System.Windows.Forms.Button();
+            this.ste_pre_only_timegap_tb = new System.Windows.Forms.TextBox();
+            this.label67 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -468,7 +470,7 @@
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1460, 872);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Data pre-process";
@@ -509,7 +511,7 @@
             this.tabPage16.Controls.Add(this.dpp_before_chart);
             this.tabPage16.Location = new System.Drawing.Point(4, 29);
             this.tabPage16.Name = "tabPage16";
-            this.tabPage16.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage16.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage16.Size = new System.Drawing.Size(1210, 484);
             this.tabPage16.TabIndex = 2;
             this.tabPage16.Text = "Plot";
@@ -576,7 +578,7 @@
             this.tabPage13.Controls.Add(this.dpp_summary_dgv);
             this.tabPage13.Location = new System.Drawing.Point(4, 29);
             this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage13.Size = new System.Drawing.Size(1210, 484);
             this.tabPage13.TabIndex = 1;
             this.tabPage13.Text = "Summary";
@@ -600,7 +602,7 @@
             this.tabPage12.Controls.Add(this.dpp_detail_gv);
             this.tabPage12.Location = new System.Drawing.Point(4, 29);
             this.tabPage12.Name = "tabPage12";
-            this.tabPage12.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage12.Size = new System.Drawing.Size(1210, 484);
             this.tabPage12.TabIndex = 0;
             this.tabPage12.Text = "Detail";
@@ -825,7 +827,7 @@
             this.tabPage2.Controls.Add(this.groupBox6);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1460, 872);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Decomposition";
@@ -1107,7 +1109,7 @@
             this.tabPage3.Controls.Add(this.groupBox7);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(1460, 872);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Outlier detection";
@@ -1226,7 +1228,7 @@
             this.tabPage10.Controls.Add(this.ol_result_dgv);
             this.tabPage10.Location = new System.Drawing.Point(4, 29);
             this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage10.Size = new System.Drawing.Size(1219, 378);
             this.tabPage10.TabIndex = 0;
             this.tabPage10.Text = "Table";
@@ -1251,7 +1253,7 @@
             this.tabPage11.Controls.Add(this.ol_result_chart);
             this.tabPage11.Location = new System.Drawing.Point(4, 29);
             this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage11.Size = new System.Drawing.Size(1219, 378);
             this.tabPage11.TabIndex = 1;
             this.tabPage11.Text = "Chart";
@@ -1377,7 +1379,7 @@
             this.tabPage6.Controls.Add(this.label5);
             this.tabPage6.Location = new System.Drawing.Point(4, 29);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage6.Size = new System.Drawing.Size(1212, 144);
             this.tabPage6.TabIndex = 0;
             this.tabPage6.Text = "Xbar";
@@ -1447,7 +1449,7 @@
             this.tabPage7.Controls.Add(this.label7);
             this.tabPage7.Location = new System.Drawing.Point(4, 29);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage7.Size = new System.Drawing.Size(1212, 144);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.Text = "EWMA";
@@ -1529,7 +1531,7 @@
             this.tabPage8.Controls.Add(this.label9);
             this.tabPage8.Location = new System.Drawing.Point(4, 29);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage8.Size = new System.Drawing.Size(1212, 144);
             this.tabPage8.TabIndex = 2;
             this.tabPage8.Text = "Cusum";
@@ -1599,7 +1601,7 @@
             this.tabPage9.Controls.Add(this.label11);
             this.tabPage9.Location = new System.Drawing.Point(4, 29);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage9.Size = new System.Drawing.Size(1212, 144);
             this.tabPage9.TabIndex = 3;
             this.tabPage9.Text = "SH-ESD";
@@ -1691,7 +1693,7 @@
             this.tabPage20.Controls.Add(this.ol_ekf_filepath_tb);
             this.tabPage20.Location = new System.Drawing.Point(4, 29);
             this.tabPage20.Name = "tabPage20";
-            this.tabPage20.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage20.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage20.Size = new System.Drawing.Size(1212, 144);
             this.tabPage20.TabIndex = 4;
             this.tabPage20.Text = "EKF-DBN";
@@ -1771,7 +1773,7 @@
             this.tabPage4.Controls.Add(this.groupBox12);
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(1460, 872);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Sensor event";
@@ -1867,7 +1869,7 @@
             this.tabPage14.Controls.Add(this.sse_result_dgv);
             this.tabPage14.Location = new System.Drawing.Point(4, 29);
             this.tabPage14.Name = "tabPage14";
-            this.tabPage14.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage14.Size = new System.Drawing.Size(1218, 504);
             this.tabPage14.TabIndex = 0;
             this.tabPage14.Text = "Table";
@@ -1891,7 +1893,7 @@
             this.tabPage15.Controls.Add(this.sse_result_chart);
             this.tabPage15.Location = new System.Drawing.Point(4, 29);
             this.tabPage15.Name = "tabPage15";
-            this.tabPage15.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage15.Size = new System.Drawing.Size(1218, 504);
             this.tabPage15.TabIndex = 1;
             this.tabPage15.Text = "Chart";
@@ -2107,7 +2109,7 @@
             this.tabPage5.Controls.Add(this.ste_nextpre_bt);
             this.tabPage5.Location = new System.Drawing.Point(4, 29);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage5.Size = new System.Drawing.Size(1460, 872);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "System event";
@@ -2205,6 +2207,8 @@
             // 
             this.groupBox14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox14.Controls.Add(this.label67);
+            this.groupBox14.Controls.Add(this.ste_pre_only_timegap_tb);
             this.groupBox14.Controls.Add(this.ste_sys_event_identify_pre_bt);
             this.groupBox14.Controls.Add(this.ste_edit_confidencelvl_bt);
             this.groupBox14.Controls.Add(this.ste_mnf_tb);
@@ -2223,6 +2227,18 @@
             this.groupBox14.TabIndex = 13;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Set system criteria";
+            // 
+            // ste_sys_event_identify_pre_bt
+            // 
+            this.ste_sys_event_identify_pre_bt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ste_sys_event_identify_pre_bt.AutoEllipsis = true;
+            this.ste_sys_event_identify_pre_bt.Location = new System.Drawing.Point(609, 73);
+            this.ste_sys_event_identify_pre_bt.Name = "ste_sys_event_identify_pre_bt";
+            this.ste_sys_event_identify_pre_bt.Size = new System.Drawing.Size(147, 45);
+            this.ste_sys_event_identify_pre_bt.TabIndex = 22;
+            this.ste_sys_event_identify_pre_bt.Text = "Identify Pressure";
+            this.ste_sys_event_identify_pre_bt.UseVisualStyleBackColor = true;
+            this.ste_sys_event_identify_pre_bt.Click += new System.EventHandler(this.ste_sys_event_identify_pre_bt_Click);
             // 
             // ste_edit_confidencelvl_bt
             // 
@@ -2655,7 +2671,7 @@
             this.tabPage17.Controls.Add(this.groupBox13);
             this.tabPage17.Location = new System.Drawing.Point(4, 29);
             this.tabPage17.Name = "tabPage17";
-            this.tabPage17.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage17.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage17.Size = new System.Drawing.Size(1460, 872);
             this.tabPage17.TabIndex = 5;
             this.tabPage17.Text = "Real time ";
@@ -2747,7 +2763,7 @@
             this.tabPage18.Controls.Add(this.rtd_result_dgv);
             this.tabPage18.Location = new System.Drawing.Point(4, 29);
             this.tabPage18.Name = "tabPage18";
-            this.tabPage18.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage18.Size = new System.Drawing.Size(1219, 378);
             this.tabPage18.TabIndex = 0;
             this.tabPage18.Text = "Table";
@@ -2771,7 +2787,7 @@
             this.tabPage19.Controls.Add(this.rt_event_chart);
             this.tabPage19.Location = new System.Drawing.Point(4, 29);
             this.tabPage19.Name = "tabPage19";
-            this.tabPage19.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage19.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage19.Size = new System.Drawing.Size(1219, 378);
             this.tabPage19.TabIndex = 1;
             this.tabPage19.Text = "Chart";
@@ -2873,7 +2889,7 @@
             this.tabPage22.Controls.Add(this.label37);
             this.tabPage22.Location = new System.Drawing.Point(4, 29);
             this.tabPage22.Name = "tabPage22";
-            this.tabPage22.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage22.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage22.Size = new System.Drawing.Size(1212, 144);
             this.tabPage22.TabIndex = 0;
             this.tabPage22.Text = "Xbar";
@@ -2943,7 +2959,7 @@
             this.tabPage23.Controls.Add(this.label40);
             this.tabPage23.Location = new System.Drawing.Point(4, 29);
             this.tabPage23.Name = "tabPage23";
-            this.tabPage23.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage23.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage23.Size = new System.Drawing.Size(1212, 144);
             this.tabPage23.TabIndex = 1;
             this.tabPage23.Text = "EWMA";
@@ -3027,7 +3043,7 @@
             this.tabPage24.Controls.Add(this.label42);
             this.tabPage24.Location = new System.Drawing.Point(4, 29);
             this.tabPage24.Name = "tabPage24";
-            this.tabPage24.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage24.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage24.Size = new System.Drawing.Size(1212, 144);
             this.tabPage24.TabIndex = 2;
             this.tabPage24.Text = "Cusum";
@@ -3095,7 +3111,7 @@
             this.tabPage25.Controls.Add(this.label44);
             this.tabPage25.Location = new System.Drawing.Point(4, 29);
             this.tabPage25.Name = "tabPage25";
-            this.tabPage25.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage25.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage25.Size = new System.Drawing.Size(1212, 144);
             this.tabPage25.TabIndex = 3;
             this.tabPage25.Text = "SH-ESD";
@@ -3245,7 +3261,7 @@
             this.tabPage21.Controls.Add(this.groupBox20);
             this.tabPage21.Location = new System.Drawing.Point(4, 29);
             this.tabPage21.Name = "tabPage21";
-            this.tabPage21.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage21.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage21.Size = new System.Drawing.Size(1460, 872);
             this.tabPage21.TabIndex = 6;
             this.tabPage21.Text = "EKF-DBN";
@@ -3751,17 +3767,24 @@
             this.EKF_predict_weight_tb.Size = new System.Drawing.Size(169, 26);
             this.EKF_predict_weight_tb.TabIndex = 4;
             // 
-            // ste_sys_event_identify_pre_bt
+            // ste_pre_only_timegap_tb
             // 
-            this.ste_sys_event_identify_pre_bt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ste_sys_event_identify_pre_bt.AutoEllipsis = true;
-            this.ste_sys_event_identify_pre_bt.Location = new System.Drawing.Point(609, 73);
-            this.ste_sys_event_identify_pre_bt.Name = "ste_sys_event_identify_pre_bt";
-            this.ste_sys_event_identify_pre_bt.Size = new System.Drawing.Size(147, 45);
-            this.ste_sys_event_identify_pre_bt.TabIndex = 22;
-            this.ste_sys_event_identify_pre_bt.Text = "Identify Pressure";
-            this.ste_sys_event_identify_pre_bt.UseVisualStyleBackColor = true;
-            this.ste_sys_event_identify_pre_bt.Click += new System.EventHandler(this.ste_sys_event_identify_pre_bt_Click);
+            this.ste_pre_only_timegap_tb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ste_pre_only_timegap_tb.Location = new System.Drawing.Point(612, 49);
+            this.ste_pre_only_timegap_tb.Name = "ste_pre_only_timegap_tb";
+            this.ste_pre_only_timegap_tb.Size = new System.Drawing.Size(76, 26);
+            this.ste_pre_only_timegap_tb.TabIndex = 23;
+            this.ste_pre_only_timegap_tb.Text = "15";
+            // 
+            // label67
+            // 
+            this.label67.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(578, 26);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(176, 20);
+            this.label67.TabIndex = 7;
+            this.label67.Text = "Pressure event timegap";
             // 
             // WaterEventDetector
             // 
@@ -4164,6 +4187,8 @@
         private System.Windows.Forms.Label label66;
         public System.Windows.Forms.TextBox EKF_DBNtrain_weight_tb;
         private System.Windows.Forms.Button ste_sys_event_identify_pre_bt;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.TextBox ste_pre_only_timegap_tb;
     }
 }
 

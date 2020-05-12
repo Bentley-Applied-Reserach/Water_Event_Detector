@@ -3284,8 +3284,8 @@ namespace new_anom
             csvData = dv_sort.ToTable();
 
             //
-
-            csvData = SystemEvent.pressure_only_event(csvData, 15);
+            double timegap = Convert.ToDouble(ste_pre_only_timegap_tb.Text); 
+            csvData = SystemEvent.pressure_only_event(csvData, timegap);
 
             /**** Show result ****/
             DataView dv_result = new DataView(csvData);
