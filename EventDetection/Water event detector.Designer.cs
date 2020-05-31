@@ -233,6 +233,8 @@
             this.label32 = new System.Windows.Forms.Label();
             this.ste_show_remainder_cb = new System.Windows.Forms.CheckBox();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.label67 = new System.Windows.Forms.Label();
+            this.ste_pre_only_timegap_tb = new System.Windows.Forms.TextBox();
             this.ste_sys_event_identify_pre_bt = new System.Windows.Forms.Button();
             this.ste_edit_confidencelvl_bt = new System.Windows.Forms.Button();
             this.ste_mnf_tb = new System.Windows.Forms.TextBox();
@@ -367,8 +369,6 @@
             this.EKF_prediction_bt = new System.Windows.Forms.Button();
             this.EKF_predict_weight_tb = new System.Windows.Forms.TextBox();
             this.dataPreProcessBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ste_pre_only_timegap_tb = new System.Windows.Forms.TextBox();
-            this.label67 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -2228,6 +2228,25 @@
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Set system criteria";
             // 
+            // label67
+            // 
+            this.label67.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(578, 26);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(176, 20);
+            this.label67.TabIndex = 7;
+            this.label67.Text = "Pressure event timegap";
+            // 
+            // ste_pre_only_timegap_tb
+            // 
+            this.ste_pre_only_timegap_tb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ste_pre_only_timegap_tb.Location = new System.Drawing.Point(612, 49);
+            this.ste_pre_only_timegap_tb.Name = "ste_pre_only_timegap_tb";
+            this.ste_pre_only_timegap_tb.Size = new System.Drawing.Size(76, 26);
+            this.ste_pre_only_timegap_tb.TabIndex = 23;
+            this.ste_pre_only_timegap_tb.Text = "15";
+            // 
             // ste_sys_event_identify_pre_bt
             // 
             this.ste_sys_event_identify_pre_bt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -3766,25 +3785,6 @@
             this.EKF_predict_weight_tb.Name = "EKF_predict_weight_tb";
             this.EKF_predict_weight_tb.Size = new System.Drawing.Size(169, 26);
             this.EKF_predict_weight_tb.TabIndex = 4;
-            // 
-            // ste_pre_only_timegap_tb
-            // 
-            this.ste_pre_only_timegap_tb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ste_pre_only_timegap_tb.Location = new System.Drawing.Point(612, 49);
-            this.ste_pre_only_timegap_tb.Name = "ste_pre_only_timegap_tb";
-            this.ste_pre_only_timegap_tb.Size = new System.Drawing.Size(76, 26);
-            this.ste_pre_only_timegap_tb.TabIndex = 23;
-            this.ste_pre_only_timegap_tb.Text = "15";
-            // 
-            // label67
-            // 
-            this.label67.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(578, 26);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(176, 20);
-            this.label67.TabIndex = 7;
-            this.label67.Text = "Pressure event timegap";
             // 
             // WaterEventDetector
             // 

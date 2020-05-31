@@ -719,6 +719,11 @@ namespace new_anom
                 {
                     //Xbar
                     case 0:
+                        /* remainder = remainder + trend */
+                        for (int i = 0; i < csvData.Rows.Count; i++)
+                        {
+                            csvData.Rows[i]["remainder"] = Convert.ToDouble(csvData.Rows[i]["remainder"].ToString()) + Convert.ToDouble(csvData.Rows[i]["trend"].ToString());
+                        }
                         ol_methodname_lb.Text = "Xbar";
                         float xbar_coef = float.Parse(ol_xbar_coef_tb.Text);
                         if (ol_xbar_nmfilter_cb.Checked == true)
@@ -3250,7 +3255,10 @@ namespace new_anom
         {
             bool pressure_high = ste_pre_high_cb.Checked;
             bool pressure_low = ste_pre_low_cb.Checked;
+            bool flow_high = ste_flow_high_cb.Checked;
+            bool flow_low = ste_flow_low_cb.Checked;
             string[] pressure_path = ste_pre_path_rtb.Lines;
+            string flow_path = ste_flow_path_tb.Text;
             DataTable csvData = new DataTable();
             foreach (string path in pressure_path)
             {
@@ -3279,6 +3287,27 @@ namespace new_anom
                 }
                 csvData.Merge(temp);
             }
+
+            DataTable flow_event = new DataTable();
+            flow_event = BasicFunction.read_csvfile(flow_event, flow_path);
+            DataView dv_flow = new DataView(flow_event);
+            string dv_flow_filter = "duration <> '' AND Name <> ''";
+            if (flow_high == false)
+            {
+                dv_flow_filter = dv_flow_filter + "AND Warning <> 'High'";
+            }
+            if (flow_low == false)
+            {
+                dv_flow_filter = dv_flow_filter + "AND Warning <> 'Low'";
+            }
+            dv_flow.RowFilter = dv_flow_filter;
+            flow_event = dv_flow.ToTable("Selected", false, "Timestamp", "Name", "Value", "Warning", "duration", "out difference");
+            if (flow_event.Rows[0]["Name"].ToString() != "")
+            {
+                flow_sensor_name = flow_event.Rows[0]["Name"].ToString();
+            }
+            csvData.Merge(flow_event);
+
             DataView dv_sort = new DataView(csvData);
             dv_sort.Sort = "Timestamp";
             csvData = dv_sort.ToTable();

@@ -83,8 +83,8 @@ namespace new_anom
             double dt_median = GetMedian(dt_value);
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                dt.Rows[i]["new remainder"] =
-                    double.Parse(dt.Rows[i]["Value"].ToString()) - double.Parse(dt.Rows[i]["seasonal"].ToString()) - dt_median;
+                dt.Rows[i]["new remainder"] = dt.Rows[i]["remainder"];
+                    // double.Parse(dt.Rows[i]["Value"].ToString()) - double.Parse(dt.Rows[i]["seasonal"].ToString()) - dt_median;
             }
             return dt;
         }

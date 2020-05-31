@@ -430,12 +430,23 @@ namespace new_anom
             bool record_first_event = false;
             for (int i = 1; i < dt.Rows.Count; i++)
             {
+                if (dt.Rows[i]["Name"].ToString() == WaterEventDetector.flow_sensor_name) // if it is a flow event record
+                {
+                    dt.Rows[i]["Pressure Event"] = ++event_count;
+                    result_dt.ImportRow(dt.Rows[i]);
+                    continue;
+                }
+
                 DateTime next_event_start = Convert.ToDateTime(dt.Rows[i]["Timestamp"].ToString());
                 DateTime next_event_end = next_event_start.AddMinutes(Convert.ToDouble(dt.Rows[i]["duration"].ToString()));
 
-                if ((next_event_start - event_start).TotalMinutes < timegap)
+                if ((next_event_start - event_start).TotalMinutes <= timegap)
                 {
-                    if (record_first_event == false) // record the first pressure event
+                    if (dt.Rows[i - 1]["Name"].ToString() == WaterEventDetector.flow_sensor_name) // if it is a flow event record
+                    {
+                        continue;
+                    }
+                    if (record_first_event == false) // record the first pressure event if it wasn't recorded
                     {
                         dt.Rows[i - 1]["Pressure Event"] = ++event_count;
                         result_dt.ImportRow(dt.Rows[i - 1]);
