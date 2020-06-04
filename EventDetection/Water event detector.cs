@@ -11,6 +11,7 @@ using RDotNet;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.IO;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 
 namespace new_anom
 {
@@ -3264,6 +3265,14 @@ namespace new_anom
             {
                 DataTable temp = new DataTable();
                 temp = BasicFunction.read_csvfile(temp, path);
+                string[] str = path.Split('\\');
+                string sensor_name = str[str.Length - 1].Split('.')[0];
+                temp.Columns.Add("Name", typeof(string));
+                for(int i = 0; i < temp.Rows.Count; i++)
+                {
+                    temp.Rows[i]["Name"] = sensor_name;
+                }
+                /*
                 DataView dv_pressure = new DataView(temp);
                 string dv_pressure_filter = "duration <> '' AND Name <> ''";
                 //dv_pressure.RowFilter = "Name <> ''";
@@ -3284,12 +3293,13 @@ namespace new_anom
                 else
                 {
                     temp = dv_pressure.ToTable("Selected", false, "Timestamp", "Name", "Value", "Warning", "duration");
-                }
+                }*/
                 csvData.Merge(temp);
             }
 
             DataTable flow_event = new DataTable();
             flow_event = BasicFunction.read_csvfile(flow_event, flow_path);
+            /*
             DataView dv_flow = new DataView(flow_event);
             string dv_flow_filter = "duration <> '' AND Name <> ''";
             if (flow_high == false)
@@ -3301,7 +3311,14 @@ namespace new_anom
                 dv_flow_filter = dv_flow_filter + "AND Warning <> 'Low'";
             }
             dv_flow.RowFilter = dv_flow_filter;
-            flow_event = dv_flow.ToTable("Selected", false, "Timestamp", "Name", "Value", "Warning", "duration", "out difference");
+            flow_event = dv_flow.ToTable("Selected", false, "Timestamp", "Name", "Value", "Warning", "duration", "out difference");*/
+            string[] fstr = flow_path.Split('\\');
+            string fsensor_name = fstr[fstr.Length - 1].Split('.')[0];
+            flow_event.Columns.Add("Name", typeof(string));
+            for (int i = 0; i < flow_event.Rows.Count; i++)
+            {
+                flow_event.Rows[i]["Name"] = fsensor_name;
+            }
             if (flow_event.Rows[0]["Name"].ToString() != "")
             {
                 flow_sensor_name = flow_event.Rows[0]["Name"].ToString();
@@ -3311,10 +3328,10 @@ namespace new_anom
             DataView dv_sort = new DataView(csvData);
             dv_sort.Sort = "Timestamp";
             csvData = dv_sort.ToTable();
-
-            //
+            
             double timegap = Convert.ToDouble(ste_pre_only_timegap_tb.Text); 
-            csvData = SystemEvent.pressure_only_event(csvData, timegap);
+            // csvData = SystemEvent.pressure_only_event(csvData, timegap);
+            csvData = SystemEvent.cluster_evetns(csvData, timegap, 2);
 
             /**** Show result ****/
             DataView dv_result = new DataView(csvData);
@@ -3342,6 +3359,7 @@ namespace new_anom
             ste_result_dgv.RowHeadersWidth = 50;
             ste_result_dgv.RowHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
             //header context
+            /*
             for (int i = 0; i < csvData.Rows.Count; i++)
             {
                 if (csvData.Rows[i]["Name"].ToString() == flow_name)
@@ -3349,13 +3367,13 @@ namespace new_anom
                     event_num++;
                     ste_result_dgv.Rows[i].HeaderCell.Value = event_num.ToString();
                 }
-            }
+            }*/
             //cell alignment
             ste_result_dgv.Columns["Timestamp"].Width = 140;
-            ste_result_dgv.Columns["Name"].Width = 50;
+            //ste_result_dgv.Columns["Name"].Width = 50;
             ste_result_dgv.Columns["Value"].Width = 50;
-            ste_result_dgv.Columns["duration"].Width = 50;
-            ste_result_dgv.Columns["Warning"].Width = 50;
+            //ste_result_dgv.Columns["duration"].Width = 50;
+            //ste_result_dgv.Columns["Warning"].Width = 50;
             if (ste_result_dgv.Columns.Contains("out difference"))
             {
                 ste_result_dgv.Columns["out difference"].Width = 70;
@@ -3374,6 +3392,11 @@ namespace new_anom
                 string path = sfd.FileName;
                 BasicFunction.WriteToCsvFile((DataTable)ste_result_dgv.DataSource, path);
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            BasicFunction.verifyPUBGroundTrue();
         }
     }
 }

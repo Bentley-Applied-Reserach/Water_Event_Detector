@@ -462,5 +462,63 @@ namespace new_anom
             }
             return result_dt;
         }
+
+        public static DataTable cluster_evetns(DataTable dt, double timegap, int steps_limit)
+        {
+            dt.Columns.Add("Pressure Event", typeof(String));
+            bool cluster_has_flow = false; //whether a cluster contains flow outliers. if true, record this one and ignore the rule
+            bool record_start_flag = false;
+            int event_step_count = 0;
+            DataTable result_dt = dt.Clone();
+            int event_count = 0;
+            int record_start = 0;
+            DateTime event_start = Convert.ToDateTime(dt.Rows[0]["Timestamp"].ToString());
+            for (int i = 1; i < dt.Rows.Count; i++)
+            {
+                DateTime next_event_start = Convert.ToDateTime(dt.Rows[i]["Timestamp"].ToString());
+
+                if (dt.Rows[i]["Name"].ToString() == WaterEventDetector.flow_sensor_name) // if it is a flow event record
+                {
+                    cluster_has_flow = true;
+                }
+
+                if ((next_event_start - event_start).TotalMinutes <= timegap)
+                {
+                    if (record_start_flag == false) //first outlier, start record
+                    {
+                        record_start_flag = true;
+                        record_start = i - 1;
+                    }
+                    event_step_count++;
+                }
+                else
+                {
+                    if (record_start_flag == true) // only import rows if record started, or record a flow outlier
+                    {
+                        record_start_flag = false;
+                        if (i - record_start >= steps_limit || cluster_has_flow == true) //start recording ( if cluster contains flow outlier, start recording no matter what
+                        {
+                            dt.Rows[record_start]["Pressure Event"] = ++event_count;
+                            cluster_has_flow = false;
+                            for (int j = record_start; j < i; j++)
+                            {
+                                result_dt.ImportRow(dt.Rows[j]);
+                            }
+                        }
+                    } 
+                    else if (cluster_has_flow == true)
+                    {
+                        dt.Rows[record_start]["Pressure Event"] = ++event_count;
+                        cluster_has_flow = false;
+                        for (int j = record_start; j < i; j++)
+                        {
+                            result_dt.ImportRow(dt.Rows[j]);
+                        }
+                    }
+                }
+                event_start = next_event_start;
+            }
+            return result_dt;
+        }
     }
 }
