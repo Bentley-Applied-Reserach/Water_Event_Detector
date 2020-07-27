@@ -466,20 +466,31 @@ namespace new_anom
         public static DataTable cluster_evetns(DataTable dt, double timegap, int steps_limit)
         {
             dt.Columns.Add("Pressure Event", typeof(String));
+            dt.Columns.Add("Event Score", typeof(String));
+            double flow_score_ceof = 0.5;
+            double pressure_score_coef = 0.5;
+            double Tsp = 60;
             bool cluster_has_flow = false; //whether a cluster contains flow outliers. if true, record this one and ignore the rule
             bool record_start_flag = false;
             int event_step_count = 0;
             DataTable result_dt = dt.Clone();
             int event_count = 0;
             int record_start = 0;
+            int flow_start_index = 0;
             DateTime event_start = Convert.ToDateTime(dt.Rows[0]["Timestamp"].ToString());
             for (int i = 1; i < dt.Rows.Count; i++)
             {
                 DateTime next_event_start = Convert.ToDateTime(dt.Rows[i]["Timestamp"].ToString());
 
+                if (i == 3613)
+                {
+                    Console.WriteLine("11");
+                }
+
                 if (dt.Rows[i]["Name"].ToString() == WaterEventDetector.flow_sensor_name) // if it is a flow event record
                 {
                     cluster_has_flow = true;
+                    flow_start_index = i;
                 }
 
                 if ((next_event_start - event_start).TotalMinutes <= timegap)
@@ -496,24 +507,65 @@ namespace new_anom
                     if (record_start_flag == true) // only import rows if record started, or record a flow outlier
                     {
                         record_start_flag = false;
-                        if (i - record_start >= steps_limit || cluster_has_flow == true) //start recording ( if cluster contains flow outlier, start recording no matter what
+                        if (i - record_start >= steps_limit) //start recording ( if cluster contains flow outlier, start recording no matter what
                         {
+                            // event score
+                            DateTime start = Convert.ToDateTime(dt.Rows[record_start]["Timestamp"].ToString());
+                            DateTime end = Convert.ToDateTime(dt.Rows[i - 1]["Timestamp"].ToString());
+                            double event_duration = (end - start).TotalMinutes;
+                            int flow_count = 0;
+                            int pressure_count = 0;
+                            int result_dt_start_index = result_dt.Rows.Count;
+                            // in case flow outlier recorded twice
+                            DateTime last_line_timestamp = new DateTime();
+                            if (result_dt.Rows.Count != 0)
+                            {
+                                last_line_timestamp = Convert.ToDateTime(result_dt.Rows[result_dt.Rows.Count - 1]["Timestamp"].ToString());
+                            }
+                            DateTime next_to_record = Convert.ToDateTime(dt.Rows[record_start]["Timestamp"].ToString());
+                            if (last_line_timestamp == next_to_record)
+                            {
+                                event_start = next_event_start;
+                                continue;
+                            }
+                            //
                             dt.Rows[record_start]["Pressure Event"] = ++event_count;
-                            cluster_has_flow = false;
                             for (int j = record_start; j < i; j++)
                             {
+                                if (dt.Rows[j]["Name"].ToString() == "Flow")
+                                {
+                                    flow_count++;
+                                }
+                                else
+                                {
+                                    pressure_count++;
+                                }
                                 result_dt.ImportRow(dt.Rows[j]);
                             }
+                            // event score
+                            double flow_density = flow_count / (event_duration / 5 + 1);
+                            double pressure_density = pressure_count / ((event_duration / 15 + 1) * 10);
+                            double event_score = (flow_density * flow_score_ceof + pressure_density * pressure_score_coef) * (event_duration / Tsp);
+                            result_dt.Rows[result_dt_start_index]["Event Score"] = event_score;
                         }
                     } 
-                    else if (cluster_has_flow == true)
+                    if (cluster_has_flow == true && record_start_flag == false) //if record hasn't started (no consective outliers, next_start - last_start > timegap) and hasflow = true (last outlier is single flow outlier), then record last one
                     {
-                        dt.Rows[record_start]["Pressure Event"] = ++event_count;
-                        cluster_has_flow = false;
-                        for (int j = record_start; j < i; j++)
+                        DateTime last_line_timestamp = new DateTime();
+                        if (result_dt.Rows.Count != 0)
                         {
-                            result_dt.ImportRow(dt.Rows[j]);
+                            last_line_timestamp = Convert.ToDateTime(result_dt.Rows[result_dt.Rows.Count - 1]["Timestamp"].ToString());
                         }
+                        DateTime next_to_record = Convert.ToDateTime(dt.Rows[flow_start_index]["Timestamp"].ToString());
+                        if(last_line_timestamp == next_to_record)
+                        {
+                            event_start = next_event_start;
+                            continue;
+                        } //if the last outlier of an event is flow, it will be recorded twice, once with other outliers and as a single event. these code to prevent this situation
+                        dt.Rows[flow_start_index]["Pressure Event"] = ++event_count;
+                        cluster_has_flow = false;
+                        dt.Rows[flow_start_index]["Event Score"] = 0.02;
+                        result_dt.ImportRow(dt.Rows[flow_start_index]);
                     }
                 }
                 event_start = next_event_start;

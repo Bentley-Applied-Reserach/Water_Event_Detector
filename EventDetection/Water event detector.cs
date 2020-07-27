@@ -53,6 +53,8 @@ namespace new_anom
         public static bool mnf_cfd_level = true;
         public static bool flow_od_cfd_level = true;
         public static bool pre_od_cfd_level = true;
+        //Pressure cluster classification verification
+        public static string ground_true_file_path = "D:\\Work\\WaterEventDetection\\data for cluster based detection\\multi-decompose\\Verify\\Ground True.csv";
         public WaterEventDetector()
         {
             InitializeComponent();
@@ -87,18 +89,18 @@ namespace new_anom
             //sensor event tab initiation
             sse_path_tb.Text = "E:\\WaterDistribution\\EventDetection\\D-Work\\NYSR data\\Xbar\\flow outlier.csv";
             //system event tab initiation
-            ste_flow_path_tb.Text = "E:\\WaterDistribution\\EventDetection\\D-Work\\NYSR data\\new xbar event\\new event\\NYSR event.csv";
-            string[] ste_rtb = { "E:\\WaterDistribution\\EventDetection\\D-Work\\NYSR data\\new xbar event\\new event\\Stn12 event.csv",
-                                 "E:\\WaterDistribution\\EventDetection\\D-Work\\NYSR data\\new xbar event\\new event\\Stn13 event.csv",
-                                 "E:\\WaterDistribution\\EventDetection\\D-Work\\NYSR data\\new xbar event\\new event\\Stn14 event.csv",
-                                 "E:\\WaterDistribution\\EventDetection\\D-Work\\NYSR data\\new xbar event\\new event\\Stn15 event.csv",
-                                 "E:\\WaterDistribution\\EventDetection\\D-Work\\NYSR data\\new xbar event\\new event\\Stn16 event.csv",
-                                 "E:\\WaterDistribution\\EventDetection\\D-Work\\NYSR data\\new xbar event\\new event\\Stn20 event.csv",
-                                 "E:\\WaterDistribution\\EventDetection\\D-Work\\NYSR data\\new xbar event\\new event\\Stn21 event.csv",
-                                 "E:\\WaterDistribution\\EventDetection\\D-Work\\NYSR data\\new xbar event\\new event\\Stn29 event.csv",
-                                 "E:\\WaterDistribution\\EventDetection\\D-Work\\NYSR data\\new xbar event\\new event\\Stn30 event.csv",
-                                 "E:\\WaterDistribution\\EventDetection\\D-Work\\NYSR data\\new xbar event\\new event\\Stn31 event.csv",
-                                 "E:\\WaterDistribution\\EventDetection\\D-Work\\NYSR data\\new xbar event\\new event\\Stn55 event.csv"};
+            ste_flow_path_tb.Text = "D:\\Work\\WaterEventDetection\\data for cluster based detection\\multi-decompose\\Flow.csv";
+            string[] ste_rtb = { "D:\\Work\\WaterEventDetection\\data for cluster based detection\\multi-decompose\\Stn12.csv",
+                                 "D:\\Work\\WaterEventDetection\\data for cluster based detection\\multi-decompose\\Stn13.csv",
+                                 "D:\\Work\\WaterEventDetection\\data for cluster based detection\\multi-decompose\\Stn14.csv",
+                                 "D:\\Work\\WaterEventDetection\\data for cluster based detection\\multi-decompose\\Stn15.csv",
+                                 "D:\\Work\\WaterEventDetection\\data for cluster based detection\\multi-decompose\\Stn16.csv",
+                                 "D:\\Work\\WaterEventDetection\\data for cluster based detection\\multi-decompose\\Stn20.csv",
+                                 "D:\\Work\\WaterEventDetection\\data for cluster based detection\\multi-decompose\\Stn21.csv",
+                                 "D:\\Work\\WaterEventDetection\\data for cluster based detection\\multi-decompose\\Stn29.csv",
+                                 "D:\\Work\\WaterEventDetection\\data for cluster based detection\\multi-decompose\\Stn30.csv",
+                                 "D:\\Work\\WaterEventDetection\\data for cluster based detection\\multi-decompose\\Stn31.csv",
+                                 "D:\\Work\\WaterEventDetection\\data for cluster based detection\\multi-decompose\\Stn55.csv"};
             ste_pre_path_rtb.Lines = ste_rtb;
             ste_mnf_tb.Text = "30";
             //real time
@@ -3395,8 +3397,21 @@ namespace new_anom
         }
 
         private void button1_Click_1(object sender, EventArgs e)
-        {
-            BasicFunction.verifyPUBGroundTrue();
+        {/*
+            BasicFunction.reverseVerify2(24);
+            BasicFunction.reverseVerify2(48);
+            BasicFunction.reverseVerify2(72);
+            BasicFunction.reverseVerify2(96);
+            BasicFunction.reverseVerify2(120);*/
+            BasicFunction.reverseVerify2(144);/*
+            BasicFunction.verifyPUBGroundTrue(24);
+            BasicFunction.verifyPUBGroundTrue(48);
+            BasicFunction.verifyPUBGroundTrue(72);
+            BasicFunction.verifyPUBGroundTrue(96);
+            BasicFunction.verifyPUBGroundTrue(120);
+            BasicFunction.verifyPUBGroundTrue(144);*/
+
+            //BasicFunction.culmative_event_score();
         }
     }
 }

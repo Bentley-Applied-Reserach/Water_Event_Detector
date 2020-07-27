@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Event Detection.exe" size="191488">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Event Detection.exe" size="196608">
       <assemblyIdentity name="Event Detection" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>sZjOJEKXmP8+7NQUyK275ysm7BS7w/g9eW8/66J9kj0=</dsig:DigestValue>
+        <dsig:DigestValue>Y/Qa+XO4kAmRopf+2UMRw2UUXhoDxjgV3QTk40ECleA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

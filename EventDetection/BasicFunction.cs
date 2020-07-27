@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using Microsoft.VisualBasic.FileIO;
+using System.Windows.Forms;
+using System.IO;
 
 namespace new_anom
 {
@@ -318,6 +320,369 @@ namespace new_anom
                     break;
             }
             return level;
+        }
+        public static void changeDateTimeFormat()
+        {
+            //open file 
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "CSV|*.csv";
+            DialogResult result = ofd.ShowDialog();
+            string filePath = " ";
+            if (result == DialogResult.OK)
+            {
+                filePath = ofd.FileName;
+            }
+
+            DataTable dt = new DataTable();
+            dt = BasicFunction.read_csvfile(dt, filePath);
+            dt.Columns.Add("Timestamp", typeof(DateTime));
+            string[] allowedFormats = { "MM/dd/yyyy h:mm", "M/d/yyyy h:mm", "MM/d/yyyy h:mm", "M/dd/yyyy h:mm",
+                                        "MM/dd/yyyy hh:mm", "M/d/yyyy hh:mm", "MM/d/yyyy hh:mm", "M/dd/yyyy hh:mm" };
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                string tempTime = dt.Rows[i][0].ToString() + " " + dt.Rows[i][1].ToString();
+                DateTime myDate = Convert.ToDateTime(tempTime); /*
+                if (!DateTime.TryParseExact(tempTime, allowedFormats, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out myDate))
+                {
+                    Console.WriteLine("not valid: " + tempTime);
+                    myDate = Convert.ToDateTime(tempTime);
+                }*/
+                //var myDate = DateTime.ParseExact(tempTime, "MM/dd/yy h:mm", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None);
+                dt.Rows[i]["Timestamp"] = myDate;
+            }
+
+            DataView dv = new DataView(dt);
+            dt = dv.ToTable("Selected", false, "Timestamp", "Size", "Type", "Remarks", "Leak Category");
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "CSV|.csv";
+            DialogResult save_result = sfd.ShowDialog();
+            if (save_result == DialogResult.OK)
+            {
+                string path = sfd.FileName;
+                BasicFunction.WriteToCsvFile(dt, path);
+            }
+        }
+        public static void verifyPUBGroundTrue(double timegap)
+        {
+            //open file 
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "CSV|*.csv";
+            DialogResult result = ofd.ShowDialog();
+            string filePath = " ";
+            if (result == DialogResult.OK)
+            {
+                filePath = ofd.FileName;
+            }
+
+            //double timegap = 72;
+
+            DataTable myEvents = new DataTable();
+            myEvents = BasicFunction.read_csvfile(myEvents, filePath);
+            myEvents.Columns.Add("Status", typeof(string));
+            DataTable PUBEvents = new DataTable();
+            string PUBPath = "D:\\Work\\WaterEventDetection\\data for cluster based detection\\Sensor Event\\Verify\\Ground True.csv";
+            PUBEvents = BasicFunction.read_csvfile(PUBEvents, PUBPath);
+
+            for (int i = 0; i < myEvents.Rows.Count; i++)
+            {
+                if(myEvents.Rows[i][3].ToString() != "") //start of a event [i]["Pressure Event"]
+                {
+                    DateTime myStartTime = Convert.ToDateTime(myEvents.Rows[i]["Timestamp"]);
+                    for (int j = 0; j < PUBEvents.Rows.Count; j++)
+                    {
+                        DateTime PUBstartTime = Convert.ToDateTime(PUBEvents.Rows[j]["Timestamp"]);
+                        if ((PUBstartTime - myStartTime).TotalHours <= timegap && (PUBstartTime - myStartTime).TotalHours > 0)
+                        {
+                            myEvents.Rows[i]["Status"] = "True Positive";
+                            break;
+                        }
+                    }
+                }
+            }
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "CSV|.csv";
+            DialogResult save_result = sfd.ShowDialog();
+            if (save_result == DialogResult.OK)
+            {
+                string path = sfd.FileName;
+                BasicFunction.WriteToCsvFile(myEvents, path);
+            }
+        }
+        public static void reverseVerify() //out-of-date
+        {
+            string[] myEventPath = {"D:\\Work\\WaterEventDetection\\data for cluster based detection\\Sensor Event\\Verify\\15Pressure.csv",
+                                    "D:\\Work\\WaterEventDetection\\data for cluster based detection\\Sensor Event\\Verify\\30Pressure.csv",
+                                    "D:\\Work\\WaterEventDetection\\data for cluster based detection\\Sensor Event\\Verify\\45Pressure.csv",
+                                    "D:\\Work\\WaterEventDetection\\data for cluster based detection\\Sensor Event\\Verify\\60Pressure.csv" };
+
+            string pubPath = "D:\\Work\\WaterEventDetection\\data for cluster based detection\\Sensor Event\\Verify\\Ground True.csv";
+            double timegap = 24;
+
+            DataTable pubEvents = new DataTable();
+            pubEvents = BasicFunction.read_csvfile(pubEvents, pubPath);
+            pubEvents.Columns.Add("15min", typeof(string));
+            pubEvents.Columns.Add("30min", typeof(string));
+            pubEvents.Columns.Add("45min", typeof(string));
+            pubEvents.Columns.Add("60min", typeof(string));
+            int index = 0;
+            foreach (string path in myEventPath)
+            {
+                index++;
+                DataTable myEvents = new DataTable();
+                myEvents = BasicFunction.read_csvfile(myEvents, path);
+                for (int i = 0; i < pubEvents.Rows.Count; i++)
+                {
+                    DateTime PUBstartTime = Convert.ToDateTime(pubEvents.Rows[i]["Timestamp"]);
+                    for (int j = 0; j < myEvents.Rows.Count; j++)
+                    {
+                        if (myEvents.Rows[j][6].ToString() != "") //start of a event [i]["Pressure Event"]
+                        {
+                            DateTime myStartTime = Convert.ToDateTime(myEvents.Rows[j]["Timestamp"]);
+                            if ((PUBstartTime - myStartTime).TotalHours <= timegap && (PUBstartTime - myStartTime).TotalHours > 0)
+                            {
+                                pubEvents.Rows[i][4 + index] = "identified";
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "CSV|.csv";
+            DialogResult save_result = sfd.ShowDialog();
+            if (save_result == DialogResult.OK)
+            {
+                string path = sfd.FileName;
+                BasicFunction.WriteToCsvFile(pubEvents, path);
+            }
+        }
+        /*
+        private void ste_sys_event_identify_pre_bt_Click(object sender, EventArgs e)
+        {
+            bool pressure_high = ste_pre_high_cb.Checked;
+            bool pressure_low = ste_pre_low_cb.Checked;
+            bool flow_high = ste_flow_high_cb.Checked;
+            bool flow_low = ste_flow_low_cb.Checked;
+            string[] pressure_path = ste_pre_path_rtb.Lines;
+            string flow_path = ste_flow_path_tb.Text;
+            DataTable csvData = new DataTable();
+            foreach (string path in pressure_path)
+            {
+                DataTable temp = new DataTable();
+                temp = BasicFunction.read_csvfile(temp, path);
+                DataView dv_pressure = new DataView(temp);
+                string dv_pressure_filter = "duration <> '' AND Name <> ''";
+                //dv_pressure.RowFilter = "Name <> ''";
+                if (pressure_high == false)
+                {
+                    dv_pressure_filter = dv_pressure_filter + "AND Warning <> 'High'";
+                }
+                if (pressure_low == false)
+                {
+                    dv_pressure_filter = dv_pressure_filter + "AND Warning <> 'Low'";
+                }
+                dv_pressure.RowFilter = dv_pressure_filter;
+
+                if (temp.Columns.Contains("out difference"))
+                {
+                    temp = dv_pressure.ToTable("Selected", false, "Timestamp", "Name", "Value", "Warning", "duration", "out difference");
+                }
+                else
+                {
+                    temp = dv_pressure.ToTable("Selected", false, "Timestamp", "Name", "Value", "Warning", "duration");
+                }
+                csvData.Merge(temp);
+            }
+
+            DataTable flow_event = new DataTable();
+            flow_event = BasicFunction.read_csvfile(flow_event, flow_path);
+            DataView dv_flow = new DataView(flow_event);
+            string dv_flow_filter = "duration <> '' AND Name <> ''";
+            if (flow_high == false)
+            {
+                dv_flow_filter = dv_flow_filter + "AND Warning <> 'High'";
+            }
+            if (flow_low == false)
+            {
+                dv_flow_filter = dv_flow_filter + "AND Warning <> 'Low'";
+            }
+            dv_flow.RowFilter = dv_flow_filter;
+            flow_event = dv_flow.ToTable("Selected", false, "Timestamp", "Name", "Value", "Warning", "duration", "out difference");
+            if (flow_event.Rows[0]["Name"].ToString() != "")
+            {
+                flow_sensor_name = flow_event.Rows[0]["Name"].ToString();
+            }
+            csvData.Merge(flow_event);
+
+            DataView dv_sort = new DataView(csvData);
+            dv_sort.Sort = "Timestamp";
+            csvData = dv_sort.ToTable();
+
+            //
+            double timegap = Convert.ToDouble(ste_pre_only_timegap_tb.Text);
+            csvData = SystemEvent.pressure_only_event(csvData, timegap);
+            // csvData = SystemEvent.cluster_evetns(csvData, timegap);
+
+            DataView dv_result = new DataView(csvData);
+            //dv_result.RowFilter = "duration <> ''";
+            csvData = dv_result.ToTable();
+            ste_result_dgv.DataSource = csvData;
+
+            int event_num = 0;
+            if (csvData.Rows.Count == 0)
+            {
+                MessageBox.Show("Result is empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            //string flow_name = csvData.Rows[0]["Name"].ToString();
+            string flow_name = flow_sensor_name;
+            ste_result_dgv.Columns["Value"].DefaultCellStyle.Format = "N2";
+            if (ste_result_dgv.Columns.Contains("out difference"))
+            {
+                ste_result_dgv.Columns["out difference"].DefaultCellStyle.Format = "N2";
+            }
+            //ste_result_dgv.Columns["out difference"].HeaderText = "Max out difference";
+
+            //set datagridview format
+            //row header width and alignment
+            ste_result_dgv.RowHeadersWidth = 50;
+            ste_result_dgv.RowHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            //header context
+            for (int i = 0; i < csvData.Rows.Count; i++)
+            {
+                if (csvData.Rows[i]["Name"].ToString() == flow_name)
+                {
+                    event_num++;
+                    ste_result_dgv.Rows[i].HeaderCell.Value = event_num.ToString();
+                }
+            }
+            //cell alignment
+            ste_result_dgv.Columns["Timestamp"].Width = 140;
+            ste_result_dgv.Columns["Name"].Width = 50;
+            ste_result_dgv.Columns["Value"].Width = 50;
+            ste_result_dgv.Columns["duration"].Width = 50;
+            ste_result_dgv.Columns["Warning"].Width = 50;
+            if (ste_result_dgv.Columns.Contains("out difference"))
+            {
+                ste_result_dgv.Columns["out difference"].Width = 70;
+            }
+            if (ste_result_dgv.Columns.Contains("Confidence level"))
+            {
+                ste_result_dgv.Columns["Confidence level"].Width = 70;
+            }
+            //ste_result_dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "CSV|.csv";
+            DialogResult result = sfd.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string path = sfd.FileName;
+                BasicFunction.WriteToCsvFile((DataTable)ste_result_dgv.DataSource, path);
+            }
+        }*/
+        public static void reverseVerify2(double timegap)
+        {
+            string myEventPath = "";
+                //"D:\\Work\\WaterEventDetection\\data for cluster based detection\\multi-decompose\\Verify\\event report.csv";
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "CSV|*.csv";
+            DialogResult result = ofd.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                myEventPath = ofd.FileName;
+            }
+            //string pubPath = "D:\\Work\\WaterEventDetection\\data for cluster based detection\\multi-decompose\\Verify\\Ground True.csv"; //location of ground true verification file
+            string pubPath = WaterEventDetector.ground_true_file_path;
+            if (!File.Exists(pubPath))
+            {
+                pubPath = myEventPath.Replace(ofd.SafeFileName, "") + "Ground True.csv"; // if the ground true location is not in the above path, try to find it in the verify file folder
+            }
+
+            DataTable pubEvents = new DataTable();
+            pubEvents = BasicFunction.read_csvfile(pubEvents, pubPath);
+            pubEvents.Columns.Add("Status", typeof(string));
+            DataTable myEvents = new DataTable();
+            myEvents = BasicFunction.read_csvfile(myEvents, myEventPath);
+            for (int i = 0; i < pubEvents.Rows.Count; i++)
+            {
+                DateTime PUBstartTime = Convert.ToDateTime(pubEvents.Rows[i]["Timestamp"]);
+                for (int j = 0; j < myEvents.Rows.Count; j++)
+                {
+                    if (myEvents.Rows[j][3].ToString() != "") //start of a event [i]["Pressure Event"]
+                    {
+                        DateTime myStartTime = Convert.ToDateTime(myEvents.Rows[j]["Timestamp"]);
+                        if ((PUBstartTime - myStartTime).TotalHours <= timegap && (PUBstartTime - myStartTime).TotalHours > 0)
+                        {
+                            pubEvents.Rows[i]["Status"] = "identified";
+                            break;
+                        }
+                    }
+                }
+            }
+            
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "CSV|.csv";
+            DialogResult save_result = sfd.ShowDialog();
+            if (save_result == DialogResult.OK)
+            {
+                string path = sfd.FileName;
+                BasicFunction.WriteToCsvFile(pubEvents, path);
+            }
+        }
+        public static void culmative_event_score()
+        {
+            //open file 
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "CSV|*.csv";
+            DialogResult result = ofd.ShowDialog();
+            string filePath = " ";
+            if (result == DialogResult.OK)
+            {
+                filePath = ofd.FileName;
+            }
+
+            //double timegap = 72;
+
+            DataTable myEvents = new DataTable();
+            myEvents = BasicFunction.read_csvfile(myEvents, filePath);
+            myEvents.Columns.Add("Culmative Score", typeof(string));
+
+            DateTime currentTime = new DateTime();
+            DateTime startTime = new DateTime();
+            DateTime firstLineTime = Convert.ToDateTime(myEvents.Rows[0]["Timestamp"].ToString());
+            for (int i = 0; i < myEvents.Rows.Count; i++)
+            {
+                if (myEvents.Rows[i]["Event Score"].ToString() != "")
+                {
+                    currentTime = Convert.ToDateTime(myEvents.Rows[i]["Timestamp"].ToString());
+                    startTime = currentTime.AddDays(-2);
+                    double culSocre = 0;
+                    for (int j = i; j >= 0; j--)
+                    {
+                        DateTime temp = Convert.ToDateTime(myEvents.Rows[j]["Timestamp"].ToString());
+                        if (myEvents.Rows[j]["Event Score"].ToString() != "")
+                        {
+                            culSocre = culSocre + Convert.ToDouble(myEvents.Rows[j]["Event Score"].ToString());
+                        }                            
+                        if ((temp - startTime).TotalMinutes <= 15 || (temp - firstLineTime).TotalMinutes <= 0)
+                        {
+                            myEvents.Rows[i]["Culmative Score"] = culSocre;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "CSV|.csv";
+            DialogResult save_result = sfd.ShowDialog();
+            if (save_result == DialogResult.OK)
+            {
+                string path = sfd.FileName;
+                BasicFunction.WriteToCsvFile(myEvents, path);
+            }
         }
     }
 }
