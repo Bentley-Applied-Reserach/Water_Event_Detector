@@ -1,0 +1,107 @@
+Timestamp,Size,Type,Remarks,Is Detected,note
+6/3/2016 11:36,54mm,Copper,Loc - Copper connection compression joint dripping,no,
+6/17/2016 13:41,200mm,DI,Loo-p - Main fitting joint,yes,
+6/20/2016 9:58,150mm,DI,Loc - Bulk meter connecting pipe,yes,single flow outlier
+6/22/2016 17:59,150mm,DI,Loc - Bulk meter connecting pipe fitting joint,yes,single flow outlier
+6/27/2016 6:30,200mm,CI,Lom - Soil subsidence (Rain),yes,
+6/30/2016 12:14,100mm,DI,Loc - Bulk meter connecting pipe fitting joint,yes,
+7/11/2016 10:26,25mm,Copper,Loc - Copper connection compression joint dripping,yes,
+7/16/2016 10:01,100mm,DI,Loc - Bulk meter connecting pipe,yes,
+7/22/2016 8:49,25mm,MTR,Loo-p - Meter body leaking,yes,single flow outlier 
+7/25/2016 9:14,150mm,DI,Lom - Localised minor corrosion,yes,single flow outlier 
+7/26/2016 8:14,150mm,DI,Loo-p - Main fitting joint,yes,
+7/26/2016 18:13,200mm,DI,Lom - Soil subsidence (Rain),yes,
+7/31/2016 11:59,100mm,DI,Loc - Bulk meter connecting pipe damaged,yes,
+8/2/2016 11:47,25mm,Copper,Loo-p - Air valve fitting joint,no,
+8/3/2016 13:17,100mm,DI,Loc - Bulk meter connecting pipe fitting joint,no,
+8/12/2016 18:42,150mm,DI,Loc - Bulk meter connecting pipe,no,
+8/18/2016 9:39,100mm,V/V,Loo-p - Valve gland leaking,yes,
+8/20/2016 14:19,150mm,DI,Lom - Localised minor corrosion,yes,
+8/23/2016 10:07,150mm,DI,Loo-p - Main fitting joint,yes,
+8/29/2016 8:32,300mm,DI,Lom - Localised minor corrosion,yes,
+8/29/2016 14:11,300mm,DI,Loo-p - Main fitting joint,yes,
+8/29/2016 16:04,200mm,DI,Lom - Localised minor corrosion (external),yes,
+8/31/2016 13:01,100mm,CI,Loo-p - Abandoned main,yes,
+9/5/2016 15:41,150mm,V/V,Loo-p - Control valve crack,no,
+9/5/2016 18:01,100mm,,Loo-p - Control valve crack,no,
+9/6/2016 15:30,54mm,Copper,Loc - Copper connecting pipe,yes,single pressure outlier
+9/6/2016 15:46,150mm,V/V,Loo-p - Valve gland leaking,yes,single pressure outlier
+9/13/2016 13:17,150mm,DI,Loc - Bulk meter connecting pipe fitting joint,no,
+9/15/2016 9:37,100mm,V/V,Loo-p - Control valve crack,no,
+9/15/2016 16:59,100mm,DI,Loc - Bulk meter connecting pipe fitting joint,no,
+9/15/2016 17:13,150mm,CI,Loo-p - Air valve fitting joint,no,
+9/15/2016 18:34,200mm,CI,Lom - Localised minor corrosion,yes,ground true happens before outlier start
+9/23/2016 19:38,150mm,DI,Loo-p - Main fitting joint,yes,single pressure outlier
+9/26/2016 13:56,25mm,TF,Loo-p - Talbot Ferrule damaged by contractor,yes,single pressure outlier
+10/4/2016 11:11,25mm,Copper,Loo-p - Air valve fitting joint,yes,
+10/11/2016 8:06,150mm,CI,Lom - Localised minor corrosion,yes,not enough outliers in the defined time gap
+10/11/2016 14:45,100mm,CI,Loc - Bulk meter connecting pipe fitting joint,yes,
+10/11/2016 17:07,100mm,V/V,Loo-p - Valve gland leaking,yes,
+10/31/2016 3:36,150mm,CI,Lom - Localised minor corrosion,yes,
+11/5/2016 6:10,200mm,DI,Lom - Soil subsidence (Rain),yes,
+11/5/2016 10:36,35mm,Copper,Loc - Copper connecting pipe,yes,
+11/8/2016 14:02,150mm,DI,Loc - Bulk meter connecting pipe fitting joint,yes,only 2 flow outliers
+11/11/2016 21:22,150mm,CI,Loc - Bulk meter connecting pipe damaged,yes,ground true happens 72h aftrer outlier start
+11/14/2016 15:20,35mm,Copper,Loo-p - Abandoned copper connecting pipe,yes,not enough  outliers (time gap too large)
+11/17/2016 8:07,100mm,DI,Loc - Bulk meter connecting pipe fitting joint,yes,
+11/22/2016 9:18,150mm,CI,Loo-p - Main fitting joint,no,
+11/28/2016 6:20,100mm,DI,Loc - Bulk meter connecting pipe,yes,single flow outlier
+12/2/2016 11:28,100mm,V/V,Loo-p - Valve gland leaking,no,
+12/5/2016 9:39,150mm,CI,Loc - Bulk meter connecting pipe,no,
+12/5/2016 16:40,25mm,TF,Loo-p - Talbot Ferrule damaged by contractor,yes,single pressure outlier
+12/17/2016 10:41,,,Loo-p - Meter tubing leak due to washer worn out,no,
+12/20/2016 19:27,100mm,DI,Loc - Bulk meter connecting pipe,yes,ground true happens before outliers
+12/21/2016 16:58,,,Loo-p - Meter coupling dripping,yes,
+12/21/2016 21:19,100mm,CI,Loo-p - Hydrant connecting pipe fitting joint,yes,
+12/23/2016 9:06,150mm,V/V,Loo-p - Valve gland leaking,yes,
+12/26/2016 15:17,100mm,CI,Loo-p - Abandoned main,yes,no outliers around
+12/28/2016 10:18,200mm,CI,Lom - Localised minor corrosion (external),yes,only 2 pressure outlier
+12/29/2016 13:29,54mm,Copper,Loc - Copper connection compression joint crack,no,
+12/30/2016 10:30,25mm,Copper,Loo-p - Air valve fitting joint,no,
+1/6/2017 14:20,150mm,DI,Lom - Soil subsidence (Vehicular load),no,
+1/9/2017 15:27,300mm,DI,Loo-p - Main fitting joint,yes,
+1/9/2017 17:07,,,Loo-p - Meter coupling dripping,yes,
+1/17/2017 10:58,,,Loo-p - Meter tubing leak due to washer worn out,yes,
+1/18/2017 8:56,100mm,V/V,Loo-p - Control valve crack,yes,
+1/18/2017 18:04,150mm,DI,Loc - Bulk meter connecting pipe,yes,
+1/21/2017 9:04,300mm,DI,Lom - Soil subsidence (Rain),yes,time gap too large (30min)
+2/1/2017 9:50,54mm,Copper,Loc - Copper connection compression joint dripping,yes,ground true happens 72h before outliers
+2/1/2017 10:01,150mm,DI,Loc - Bulk meter connecting pipe fitting joint,yes,no outliers around
+2/3/2017 10:27,200mm,DI,Loo-p - Main fitting joint,no,
+2/3/2017 13:42,300mm,DI,Lom - Main damaged by contractor,no,
+2/13/2017 17:50,100mm,V/V,Loo-p - Control valve crack,yes,
+2/23/2017 8:58,200mm,DI,Loo-p - Main fitting joint,yes,
+2/23/2017 14:48,200mm,DI,Lom - Soil subsidence (Rain),yes,
+2/24/2017 12:51,150mm,CI,Lom - Localised minor corrosion,yes,
+2/25/2017 11:35,200mm,DI,Lom - Main damaged by contractor,yes,
+3/1/2017 17:34,25mm,Copper,Loo-p - Air valve damaged by contractor,yes,
+3/6/2017 11:20,25mm,TF,Loo-p - Talbot Ferrule body cracked,yes,only 3 steps
+3/7/2017 17:20,100mm,V/V,Loo-p - Control valve crack,yes,only 3 steps
+3/8/2017 10:33,150mm,DI,Loc - Bulk meter connecting pipe fitting joint,yes,only 3 steps
+3/22/2017 8:00,150mm,V/V,Loo-p - Valve gland leaking,yes,
+3/22/2017 16:12,100mm,V/V,Loo-p - Control valve crack,yes,
+3/31/2017 8:36,25mm,TF,Loo-p - Talbot Ferrule damaged by contractor,yes,bug. Outliers starts too early but last a long time
+3/31/2017 13:17,,,Loo-p - Hydrant arm cap dripping,yes,bug. Outliers starts too early but last a long time
+3/31/2017 14:55,150mm,DI,Loo-p - Main fitting joint,yes,bug. Outliers starts too early but last a long time
+4/11/2017 13:54,35mm,Copper,Loc - Copper connecting pipe,yes,bug. Outliers starts too early but last a long time
+4/18/2017 9:01,150mm,CI,Lom - Localised minor corrosion (external),yes,bug. Outliers starts too early but last a long time
+4/18/2017 9:13,35mm,Copper,Loo-p - Abandoned copper connecting pipe,yes,bug. Outliers starts too early but last a long time
+4/19/2017 11:20,35mm,SC,Loo-p - Control stopcock,yes,bug. Outliers starts too early but last a long time
+4/19/2017 15:38,150mm,V/V,Loo-p - Valve gland leaking,yes,bug. Outliers starts too early but last a long time
+4/19/2017 15:44,150mm,V/V,Loo-p - Valve gland leaking,yes,bug. Outliers starts too early but last a long time
+4/23/2017 4:14,150mm,CI,Loc - Bulk meter connecting pipe,yes,bug. Outliers starts too early but last a long time
+4/26/2017 15:10,100mm,V/V,Loo-p - Control valve crack,yes,bug. Outliers starts too early but last a long time
+5/3/2017 12:53,100mm,V/V,Loo-p - Control valve crack,yes,
+5/17/2017 11:06,25mm,Copper,Loo-p - Abandoned copper connecting pipe,yes,outlier too early (72h)
+5/17/2017 16:17,150mm,DI,Loo-p - Main damaged at fitting joint,yes,
+5/23/2017 9:01,100mm,CI,Loo-p - Hydrant connecting pipe,yes,single flow outlier
+5/27/2017 10:32,150mm,DI,Loc - Bulk meter connecting pipe fitting joint,yes,
+6/2/2017 9:49,150mm,DI,Loc - Bulk meter connecting pipe fitting joint,yes,
+6/17/2017 8:03,300mm,DI,Loo-p - Main fitting joint,yes,
+6/17/2017 17:37,35mm,Copper,Loc - Copper connection compression joint crack,yes,
+6/25/2017 17:58,100mm,CI,Loc - Bulk meter connecting pipe fitting joint,yes,
+6/26/2017 8:51,150mm,CI,Lom - Localised minor corrosion,yes,
+6/27/2017 6:09,150mm,V/V,Loo-p - Control valve crack,yes,
+6/27/2017 16:18,,,Loo-p - Hydrant arm cap dripping,yes,
+6/29/2017 10:23,100mm,DI,Loc - Bulk meter connecting pipe,yes,
+6/30/2017 9:42,,,Loo-p - Hydrant arm cap dripping,no,
